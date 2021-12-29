@@ -1,0 +1,21 @@
+<!--<input type="text" />
+<button (click)="post_new_zekr()">تأكيد</button>
+-->
+
+
+<div class="container">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+      <div class="form-group">
+        <label>الذكر</label>
+        <input #zekrRef dir="rtl" type="text" class="form-control" name="zekr" ngModel>
+      </div>
+      <div class="confirm-return">
+        <button type="submit" class="btn btn-primary">تأكيد</button>
+        <button routerLink="/" class="btn btn-success">الصفحة الرئيسية</button>
+      </div>
+    </form>
+    <div>
+        
+    </div>
+</div>
+

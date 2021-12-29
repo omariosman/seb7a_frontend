@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    margin: auto;
+    text-align: center;
+}
+.main-heading{
+font-family: 'DroidArabicKufiRegular';
+text-align: center;
+text-decoration: underline;
+color: #524d4d;
+font-size: 40px;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+
+
+@font-face {
+    font-family: "DroidArabicKufiRegular";
+    src: local("DroidArabicKufiRegular"), url(./assets/fonts/DroidKufi-Regular.ttf) format("truetype");
+}
+
+
+* {
+    font-family: 'DroidArabicKufiRegular';
+}

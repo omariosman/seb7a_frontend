@@ -1,0 +1,28 @@
+
+<div class="container">
+
+
+<!--
+
+<div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+  <button class="btn btn-outline-success mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">قائمة الأذكار</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownManual">
+    <button *ngFor="let zekr of all_zekr" ngbDropdownItem>{{zekr.name}}</button>
+  </div>
+</div>
+-->
+
+
+  <select dir="rtl" class='select-option'
+      #mySelect
+      (change)='onOptionsSelected(mySelect.value)'>
+      <option class='option'  
+      [value]="-1">اختر ذكرًا</option> 
+    <option class='option' 
+    *ngFor='let zekr of all_zekr' 
+    [value]="zekr.id">{{zekr.name}}</option>
+  </select>
+
+</div>
+
+<app-seb7a [selected_zekr]="selected_zekr"></app-seb7a>

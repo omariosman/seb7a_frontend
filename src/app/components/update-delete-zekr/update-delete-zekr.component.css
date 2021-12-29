@@ -1,0 +1,59 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zekr-container {
+    border: 1px solid rgb(99, 98, 98);
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    padding: 10px;
+    margin-bottom: 3px;
+    font-size: 18px;
+    line-height: 35px;
+    background: #EBE8E8CC;
+    
+
+}
+
+.zekr-container .index-span {
+    width: 30px;
+height: 33px;
+background: #323030;
+border-radius: 50%;
+display: inline-block;
+color: #FFF;
+border: 3px solid #FFF;
+line-height: 26px;
+}
+
+
+.btn-part {
+    display: flex;
+}
+
+.update-btn{
+    order: 2;
+    margin-left:5px;
+}
+
+.del-btn{
+    order: 1
+}
+
+.zekr-name {
+    order: 2
+}
+
+.btn-part {
+    order: 1
+}
+
+
+
+.return-btn {
+    margin-top: 30px;
+}
+

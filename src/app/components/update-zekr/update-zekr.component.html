@@ -1,0 +1,14 @@
+<div class="container">
+    <form dir="rtl" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+      <div class="form-group">
+        <label>الذكر</label>
+        <input #zekrRef [(ngModel)]="zekr_name" type="text" class="form-control" name="zekr" ngModel>
+      </div>
+      <div class="confirm-return">
+        <button type="submit" class="btn btn-primary">تأكيد</button>
+        <button routerLink="/" class="btn btn-success">الصفحة الرئيسية</button>
+      </div>
+     
+    </form>
+</div>
+

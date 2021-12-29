@@ -1,0 +1,12 @@
+<div class="container main-container">
+    <div *ngFor="let zekr of all_zekr; let i = index" class="zekr-container">
+        <div dir="rtl" class="zekr-name"><span class="index-span">{{i+1}}</span> {{zekr.name}}</div>
+        <div class="btn-part">
+            <a [routerLink]="['/update_zekr', zekr.id, zekr.name]" class="btn btn-primary update-btn">تعديل</a>
+            <button (click)="delete_zekr(zekr.id)" class="btn btn-danger del-btn">حذف</button>
+        </div>
+    </div>
+    <div>
+        <button routerLink="/" class="btn btn-success return-btn">الصفحة الرئيسية</button>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.confirm-return {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    direction: rtl;
+}
+
+.confirm-return button {
+    margin-right: 10px;
+}

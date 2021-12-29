@@ -1,26 +1,87 @@
-<div>
+<!--
 <div class="container">
 
 
     <div class="container-child operations">
-        <div class="operations-child">اختيار الذكر</div>
-        <div class="operations-child">إضافة دعاء</div>
-        <div class="operations-child">تعديل أو حذف دعاء</div>
+        <button routerLink="post_new_zekr" class="operations-child btn btn-primary">إضافة دعاء</button>
+        <button routerLink="update_delete_zekr" class="operations-child btn btn-primary">تعديل أو حذف دعاء</button>
     </div>
 
     <div class="container-child seb7a">
-        <div class="zekr seb7a-child">
-            سبحان الله
+    
+        <div class="zekr seb7a-child" *ngIf="selected_zekr; else not_selected_yet">
+           {{selected_zekr.name}}
         </div>
+    
+        
+            <ng-template class="zekr seb7a-child" #not_selected_yet>
+                <div class="zekr seb7a-child">
+                اختر ذكرًا من القائمة السابقة
+                </div>
+            </ng-template>
+      
 
-        <div class="seb7a-second seb7a-child">
-            <div class="counter">2000</div>
+    
+        <div *ngIf="selected_zekr; else not_selected2" class="seb7a-second seb7a-child">
+            <div class="counter">{{selected_zekr.counter}}</div>
+            <button type="button" (click)="incrementCounter()" class="click btn btn-secondary">
+                <button (click)="resetCounter()" class="reset"></button>
 
-            <div class="click"></div>    
-            <div class="reset">reset</div>
+            </button>    
+            
                 
         </div>
+
+        
+        <ng-template #not_selected2>
+            <div class="seb7a-second seb7a-child">
+                <div class="counter">0</div>
+                <button class="click">
+                    <button class="reset"></button>
+                </button>    
+                
+            </div>
+        </ng-template>    
+
+
+
+
     </div>
 
+
 </div>
+    -->
+
+
+
+<div class="container">
+    <div class="container-child operations">
+        <button routerLink="post_new_zekr" class="operations-child add-btn-custom-design">إضافة ذكر</button>
+        <button routerLink="update_delete_zekr" class="operations-child edit-btn-custom-design">تعديل أو حذف ذكر</button>
+    </div>
+
+<div class="my-container seb7a"> 
+    <div class="my-counter" *ngIf="selected_zekr; else not_selected_yet">{{selected_zekr.counter}}</div>
+    <ng-template #not_selected_yet>
+        <div class="my-counter">0</div>
+    </ng-template>
+    
+    <div class="my-name" *ngIf="selected_zekr; else not_selected_name">{{selected_zekr.name}}</div>
+    <ng-template #not_selected_name>
+        <div class="my-name">اختر ذكرًا من القائمة السابقة</div>
+    </ng-template>
+
+    <div class="click-plus_reset2">
+  
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button (click)="incrementCounter()" type="button" class="click-here btn btn-secondary">اضغط هنا</button>
+            <button (click)="resetCounter()" type="button" class="btn btn-secondary">إعادة ضبط</button>
+          </div>
+    </div>
 </div>
+
+
+
+</div>
+
+
